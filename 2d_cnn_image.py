@@ -43,7 +43,6 @@ class Dataset(Dataset):
                 
                 self.image_paths.append((full_path, vid_id, frame_num))
 
-        print(f" -> Found {len(self.image_paths)} images in {split}")
 
     def __len__(self):
         return len(self.image_paths)
@@ -100,7 +99,7 @@ def train_model():
     criterion = nn.MSELoss()
     optimizer = optim.Adam(model.parameters(), lr=LR)
     
-    print("Starting Training...")
+    print("Starting Training")
     for epoch in range(EPOCHS):
         model.train()
         loop = tqdm(train_loader, desc=f"Epoch {epoch+1}/{EPOCHS}")
@@ -150,7 +149,7 @@ def generate_submission(model):
     
     df['Predicted'] = (df['Predicted'] - df['Predicted'].min()) / (df['Predicted'].max() - df['Predicted'].min())
     df.to_csv("2d_cnn_images.csv", index=False)
-    print("Done.")
+    print("Done")
 
 
 if __name__ == "__main__":
