@@ -15,7 +15,7 @@ CONFIG = {
     'SEQ_LEN': 4,              # Number of frames to look at
     'IMG_SIZE': 128,           # Resize dimension
     'BATCH_SIZE': 16,
-    'EPOCHS': 1,
+    'EPOCHS': 5,
     'LR': 1e-4,
     'ROOT_DIR': './dataset',
     'DEVICE': 'cuda' if torch.cuda.is_available() else 'cpu'
