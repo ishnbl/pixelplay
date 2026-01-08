@@ -14,7 +14,7 @@ from tqdm import tqdm
 #Hyperparams
 CONFIG = {
     'BATCH_SIZE': 8,         
-    'EPOCHS': 1,
+    'EPOCHS': 5,
     'LR': 1e-4,
     'SEQ_LEN': 16,            
     'IMG_SIZE': (128, 128),
