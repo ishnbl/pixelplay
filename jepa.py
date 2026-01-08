@@ -15,7 +15,7 @@ from tqdm import tqdm
 #HYPERPARAMETERS
 CONFIG = {
     'BATCH_SIZE': 32,
-    'EPOCHS': 1,
+    'EPOCHS': 5,
     'LR': 1e-3,
     'IMG_SIZE': 128,
     'PATCH_SIZE': 16,
